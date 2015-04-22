@@ -6,10 +6,10 @@ import sys
 serialPort = Serial("/dev/cu.SLAB_USBtoUART", baudrate = 1200)
 
 if (serialPort.isOpen() == False):
-    print ("Python is opening port:\n\tSerial(\"/dev/cu.SLAB_USBtoUART\", 1200, timeout=2)")
+    print ("Python is opening port:\n\tSerial(\"/dev/cu.SLAB_USBtoUART\", 1200)")
     serialPort.open()
 else:
-    print ("Python sees that the port:\n\tSerial(\"/dev/cu.SLAB_USBtoUART\", 11560, timeout=2)\n\n\tis already open.")
+    print ("Python sees that the port:\n\tSerial(\"/dev/cu.SLAB_USBtoUART\", 1200)\n\n\tis already open.")
 
 print ('Number of arguments:', len(sys.argv), 'arguments.')
 print 'Argument List:', str(sys.argv)
