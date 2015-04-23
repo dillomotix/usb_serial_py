@@ -3,7 +3,7 @@ import time
 import sys
 
 
-serialPort = Serial("/dev/cu.SLAB_USBtoUART", baudrate = 1200)
+serialPort = Serial("/dev/cu.SLAB_USBtoUART", baudrate = 115200)
 
 if (serialPort.isOpen() == False):
     print ("Python is opening port:\n\tSerial(\"/dev/cu.SLAB_USBtoUART\", 1200)")
@@ -31,7 +31,7 @@ byteArr = bytearray(sendStr)
 #numBytesSent = serialPort.write( byteData )
 #numBytesSent = serialPort.write( sendStr )
 numBytesSent = serialPort.write( byteArr )
-time.sleep(5)
+time.sleep(8)//seconds
 #serialPort.flush()
 
 # bytesLeft = serialPort.outWaiting()
